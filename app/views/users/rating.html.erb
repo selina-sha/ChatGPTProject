@@ -1,0 +1,21 @@
+<h1>Rate Job Preference</h1>
+
+<% careers = @array_careers %>
+    <%= form_tag save_rating_path, method: :post, remote: true do %>
+        <% careers.each do |career| %>
+        <%= career %><br>
+        <label>
+            <%= radio_button_tag "career_choice_#{career}", career, false, id: "#{career}_yes" %>
+            <%= label_tag "#{career}_yes", "Yes" %>
+        </label>
+    
+        <label>
+            <%= radio_button_tag "career_choice_#{career}", "no_#{career}", false, id: "#{career}_no" %>
+            <%= label_tag "#{career}_no", "No" %>
+        </label>
+    
+        <br>
+        <% end %>
+    
+        <%= submit_tag "Save" %>
+    <% end %>

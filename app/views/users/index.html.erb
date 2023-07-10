@@ -1,0 +1,8 @@
+<h1>Users</h1>
+
+<% @users.each do |user| %>
+    User ID: <%= user.id %> --- <%= link_to user.description, user %><br>
+<% end %>
+
+<br>
+<%= link_to "Job Recommendation Based on Personality", new_user_path %>

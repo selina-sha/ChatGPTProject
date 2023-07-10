@@ -1,0 +1,21 @@
+<h1>Recommended Careers</h1>
+<table>
+    <thead>
+        <tr>
+        <th>Career</th>
+        <th>Interested</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% JSON.parse(@user.career).each do |career| %>
+        <% rating = @user.ratings.find_by(career_name: career) %>
+        <% color = rating&.like == true ? "green" : "red" %>
+        <tr>
+            <td><%= career %></td>
+            <td style="color: <%= color %>;"><%= rating&.like == true ? "True" : "False" %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+<%= link_to "Rate Job Preference", user_rating_path %><br>
+<%= link_to "Back to All Users", users_path %>

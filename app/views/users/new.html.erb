@@ -1,0 +1,13 @@
+<h1>Job Recommendation Based on Personality</h1>
+
+<%= form_with model: @user do |form| %>
+    <div>
+        5 Words Best Describe Yourself<br>
+        <%= form.text_field :description %>
+    </div>
+    <br>
+    <div>
+        <%= form.submit 'Recommend Jobs'%>
+    </div>
+
+<% end %>
