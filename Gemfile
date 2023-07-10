@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source "https://gems.ruby.com"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.0"
@@ -26,6 +26,9 @@ gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
+
+# FOR CHATGPT
+gem "ruby-openai"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
