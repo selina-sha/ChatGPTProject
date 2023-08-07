@@ -1,13 +1,8 @@
 <h1>Job Recommendation Based on Personality</h1>
 
-<%= form_with model: @user do |form| %>
-    <div>
-        5 Words Best Describe Yourself<br>
-        <%= form.text_field :description %>
-    </div>
+<%= form_tag(user_create_path, method: "post") do %>
+    5 Words Best Describe Yourself <br>
+    <%= text_field_tag(:description) %><br>
     <br>
-    <div>
-        <%= form.submit 'Recommend Jobs'%>
-    </div>
-
+    <%= submit_tag("Recommend Jobs") %>
 <% end %>

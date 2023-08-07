@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema[7.0].define(version: 2023_07_10_005839) do
   create_table "ratings", force: :cascade do |t|
+    # primary key? -> id
     t.string "career_name"
     t.boolean "like"
     t.integer "user_id", null: false
